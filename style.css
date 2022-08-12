@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url(/assets/font/GothamRounded-Medium.otf);
+  font-weight: bold;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 170, 254, 1) 0%,
+    rgba(0, 254, 109, 1) 100%
+  );
+  font-family: "Gotham Rounded", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main > #calculator {
+  width: 100%;
+  max-width: 398px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main > #calculator > #calculatorDisplayContainer {
+  width: 100%;
+  height: 120px;
+  background: #000000;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+main
+  > #calculator
+  > #calculatorDisplayContainer
+  > #calculatorInnerDisplayContainer {
+  width: 100%;
+  margin: 15px;
+  overflow: hidden;
+}
+
+main > #calculator > #calculatorButtonsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+main > #calculator > #calculatorButtonsContainer button {
+  height: 100px;
+  border: 1px solid #ffffff;
+  border-radius: none;
+  font-size: 26px;
+  font-weight: 600;
+  background: #bff5eb;
+  cursor: pointer;
+}
+
+main > #calculator > #calculatorButtonsContainer button:hover {
+  background: #a3ffee;
+}
+
+main > #calculator > #calculatorButtonsContainer button:first-child {
+  grid-column: 1 / span 2;
+}
+
+main > #calculator > #calculatorButtonsContainer button:last-child {
+  grid-column: 3 / span 2;
+}
